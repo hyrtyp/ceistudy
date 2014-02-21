@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/phone_study_labelParentParent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:id="@+id/phone_study_labelParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="1dip" >
+
+        <Button
+            style="@style/yangshi_4"
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:layout_marginRight="2dip"
+            android:background="@drawable/phone_study_label_select"
+            android:text="全部"
+            android:textColor="@color/phone_study_menuselect" />
+
+        <Button
+            style="@style/yangshi_4"
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:layout_marginRight="2dip"
+            android:background="@drawable/phone_study_labelnormal"
+            android:text="未学完"
+            android:textColor="@color/phone_study_menunormal" />
+
+        <Button
+            style="@style/yangshi_4"
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:layout_marginRight="2dip"
+            android:background="@drawable/phone_study_labelnormal"
+            android:text="未上传"
+            android:textColor="@color/phone_study_menunormal" />
+
+        <Button
+            style="@style/yangshi_4"
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:layout_marginRight="2dip"
+            android:background="@drawable/phone_study_labelnormal"
+            android:text="已上传"
+            android:textColor="@color/phone_study_menunormal" />
+
+        <Button
+            style="@style/yangshi_4"
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:layout_marginRight="2dip"
+            android:background="@drawable/phone_study_labelnormal"
+            android:text="已学完"
+            android:textColor="@color/phone_study_menunormal" />
+    </LinearLayout>
+
+</HorizontalScrollView>
