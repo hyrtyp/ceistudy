@@ -7,7 +7,7 @@
 
     <include layout="@layout/phone_study_nominate_main"/>
 
-    <include layout="@layout/phone_study_bottom"/>
+    <include layout="@layout/phone_study_bottom2"/>
 
 
 </RelativeLayout>

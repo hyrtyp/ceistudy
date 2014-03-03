@@ -7,6 +7,6 @@
 
     <include layout="@layout/phone_study_search_main"/>
     
-    <include layout="@layout/phone_study_bottom"/>
+    <include layout="@layout/phone_study_bottom2"/>
 
 </RelativeLayout>

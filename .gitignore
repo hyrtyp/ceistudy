@@ -1,7 +1,8 @@
 .gradle
 /local.properties
-/.idea
+/.idea/workspace.xml
 .DS_Store
+<<<<<<< HEAD
 Weibo/build/
 WeiboApi/build/
 CeiCustom/CeiCustom.iml
@@ -9,5 +10,14 @@ CeiCustomPhone/CeiCustomPhone.iml
 Weibo/Weibo.iml
 WeiboApi/WeiboApi.iml
 ceistudy.iml
+=======
+/.idea
+/app
+/gradle.properties
+Weibo/build
+WeiboApi/build
+CeiCustom/build
+CeiCustomPhone/build
+>>>>>>> ce54eaaea8daacf293b545f2e8a756bcaa674bb9
 
 

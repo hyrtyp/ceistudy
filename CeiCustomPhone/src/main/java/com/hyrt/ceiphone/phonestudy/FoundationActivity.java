@@ -1,7 +1,25 @@
 package com.hyrt.ceiphone.phonestudy;
 
-import java.util.ArrayList;
-import java.util.List;
+import android.app.Activity;
+import android.app.ActivityGroup;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.os.Handler;
+import android.os.Message;
+import android.view.Gravity;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.PopupWindow;
+import android.widget.TextView;
 
 import com.hyrt.cei.application.CeiApplication;
 import com.hyrt.cei.ui.personcenter.PersonCenter;
@@ -19,29 +37,8 @@ import com.hyrt.ceiphone.common.Announcement;
 import com.hyrt.ceiphone.common.Disclaimer;
 import com.hyrt.ceiphone.phonestudy.data.DataHelper;
 
-import android.app.Activity;
-import android.app.ActivityGroup;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
-import android.os.Handler;
-import android.os.Message;
-import android.view.Gravity;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.ViewGroup.LayoutParams;
-import android.widget.AdapterView;
-import android.widget.BaseAdapter;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.PopupWindow;
-import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.LinearLayout;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FoundationActivity extends ActivityGroup implements OnClickListener,
 		OnItemClickListener {
@@ -436,7 +433,7 @@ public class FoundationActivity extends ActivityGroup implements OnClickListener
 	@Override
 	public void onClick(View view) {
 		switch (view.getId()) {
-		case R.id.phone_study_self:
+		case R.id.phone_study_self_tv:
 			if (CURRENT_KEY == SELF_DATA_KEY)
 				return;
 			Intent intent11 = new Intent(this, SelfActivity.class);
@@ -445,7 +442,7 @@ public class FoundationActivity extends ActivityGroup implements OnClickListener
 			else
 				MyTools.exitShow(FoundationActivity.this, ((Activity)FoundationActivity.this).getWindow().getDecorView(),  "请登陆后查看！");
 			break;
-		case R.id.phone_study_say:
+		case R.id.phone_study_say_tv:
 			if (CURRENT_KEY == SAY_DATA_KEY)
 				return;
 			Intent intent12 = new Intent(this, SayActivity.class);
@@ -454,13 +451,13 @@ public class FoundationActivity extends ActivityGroup implements OnClickListener
 			else
 				MyTools.exitShow(FoundationActivity.this, ((Activity)FoundationActivity.this).getWindow().getDecorView(),  "请登陆后查看！");
 			break;
-		case R.id.phone_study_down:
+		case R.id.phone_study_down_tv:
 			if (CURRENT_KEY == PRELOAD_DATA_KEY)
 				return;
 			Intent intent22 = new Intent(this, PreloadActivity.class);
 			startActivity(intent22);
 			break;
-		case R.id.phone_study_kind:
+		case R.id.phone_study_kind_tv:
 			if (CURRENT_KEY == KIND_DATA_KEY)
 				return;
 			Intent intent1 = new Intent(this, KindsActivity.class);
@@ -472,13 +469,13 @@ public class FoundationActivity extends ActivityGroup implements OnClickListener
 			Intent intent3 = new Intent(this, FreeActivity.class);
 			startActivity(intent3);
 			break;
-		case R.id.phone_study_nominate:
+		case R.id.phone_study_nominate_tv:
 			if (CURRENT_KEY == SERVICE_DATA_KEY)
 				return;
 			Intent intent = new Intent(this, NominateActivity.class);
 			startActivity(intent);
 			break;
-		case R.id.phone_study_mymore:
+		case R.id.phone_study_mymore_tv:
 			if (CURRENT_KEY == RECORD_DATA_KEY)
 				return;
 			Intent intent4 = new Intent(this, StudyRecordActivity.class);
@@ -493,7 +490,7 @@ public class FoundationActivity extends ActivityGroup implements OnClickListener
 			Intent intent2 = new Intent(this, SearchActivity.class);
 			startActivity(intent2);
 			break;
-        case R.id.phone_study_notice:
+        case R.id.phone_study_notice_tv:
             if (CURRENT_KEY == NOTICE_DATA_KEY)
                 return;
             if (!loginName.equals(""))
@@ -501,7 +498,7 @@ public class FoundationActivity extends ActivityGroup implements OnClickListener
             else
                 MyTools.exitShow(FoundationActivity.this, ((Activity)FoundationActivity.this).getWindow().getDecorView(),  "请登陆后查看！");
                 break;
-        case R.id.phone_study_personcenter:
+        case R.id.phone_study_personcenter_tv:
             if (CURRENT_KEY == PERSON_DATA_KEY)
                 return;
             if (!loginName.equals(""))
@@ -510,7 +507,7 @@ public class FoundationActivity extends ActivityGroup implements OnClickListener
                 MyTools.exitShow(FoundationActivity.this, ((Activity)FoundationActivity.this).getWindow().getDecorView(),  "请登陆后查看！");
 
                 break;
-        case R.id.phone_study_about:
+        case R.id.phone_study_about_tv:
             if (CURRENT_KEY == ABOUT_DATA_KEY)
                 return;
                 startActivity(new Intent(this, Disclaimer.class));

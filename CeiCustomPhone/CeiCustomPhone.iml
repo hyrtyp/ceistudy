@@ -56,6 +56,16 @@
       <sourceFolder url="file://$MODULE_DIR$/src/instrumentTestFlavor1/rs" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/instrumentTestFlavor1/res" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/instrumentTestFlavor1/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/build/source/r/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/source/aidl/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/source/buildConfig/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/source/rs/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/res/rs/debug" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/build/source/r/test/debug" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/source/aidl/test/debug" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/source/buildConfig/test/debug" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/source/rs/test/debug" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/res/rs/test/debug" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/aidl" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/assets" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/java" isTestSource="false" />
@@ -92,14 +102,14 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 19 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="WeiboApi" exported="" />
     <orderEntry type="library" exported="" name="support-v4-13.0.0" level="project" />
     <orderEntry type="library" exported="" name="dom4j-1.6.1" level="project" />
-    <orderEntry type="library" exported="" name="j4lChartAndroid" level="project" />
-    <orderEntry type="library" exported="" name="commons-httpclient-3.1" level="project" />
-    <orderEntry type="library" exported="" name="ksoap2-android-assembly-2.4-jar-with-dependencies (1)" level="project" />
-    <orderEntry type="library" exported="" name="ant" level="project" />
     <orderEntry type="module" module-name="Weibo" exported="" />
-    <orderEntry type="module" module-name="WeiboApi" exported="" />
+    <orderEntry type="library" exported="" name="j4lChartAndroid" level="project" />
+    <orderEntry type="library" exported="" name="ksoap2-android-assembly-2.4-jar-with-dependencies (1)" level="project" />
+    <orderEntry type="library" exported="" name="commons-httpclient-3.1" level="project" />
+    <orderEntry type="library" exported="" name="ant" level="project" />
   </component>
 </module>
 
