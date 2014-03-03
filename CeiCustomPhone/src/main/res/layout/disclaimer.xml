@@ -30,7 +30,8 @@
 			android:layout_marginLeft="20dip"
 			android:layout_centerInParent="true"
 			android:layout_width="wrap_content"
-			android:layout_height="wrap_content" />
+			android:layout_height="wrap_content"
+            />
 	</RelativeLayout>
 
 	<RelativeLayout android:layout_alignParentBottom="true"
@@ -54,7 +55,7 @@
 		android:layout_alignParentBottom="true"
 		android:layout_centerHorizontal="true" android:layout_width="fill_parent"
 		android:layout_height="wrap_content">
-        <include layout="@layout/phone_study_bottom_other" />
+        <include layout="@layout/phone_study_bottom_other2" />
 	</LinearLayout>
 	<LinearLayout
 		android:paddingTop="5dip"

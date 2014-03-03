@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="main" >
+        <source path="C:\Users\GYH\.ssh\ceistudy\Weibo\src\main\res" >
+            <file
+                name="weibosdk_dialog_bg"
+                path="C:\Users\GYH\.ssh\ceistudy\Weibo\src\main\res\drawable\weibosdk_dialog_bg.9.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                path="C:\Users\GYH\.ssh\ceistudy\Weibo\src\main\res\values\color.xml"
+                qualifiers="" >
+                <color name="text_num_gray" >#333
+                </color>
+                <color name="dialog_title_blue" >#9CCCF7
+                </color>
+                <color name="transparent" >#00000000
+                </color>
+            </file>
+            <file
+                path="C:\Users\GYH\.ssh\ceistudy\Weibo\src\main\res\values\dimens.xml"
+                qualifiers="" >
+                <dimen name="weibosdk_dialog_right_margin" >10dp
+                </dimen>
+                <dimen name="weibosdk_dialog_bottom_margin" >10dp
+                </dimen>
+                <dimen name="weibosdk_dialog_top_margin" >30dp
+                </dimen>
+                <dimen name="weibosdk_dialog_left_margin" >10dp
+                </dimen>
+            </file>
+            <file
+                path="C:\Users\GYH\.ssh\ceistudy\Weibo\src\main\res\values-large\dimens.xml"
+                qualifiers="large" >
+                <dimen name="weibosdk_dialog_right_margin" >30dp
+                </dimen>
+                <dimen name="weibosdk_dialog_bottom_margin" >15dp
+                </dimen>
+                <dimen name="weibosdk_dialog_top_margin" >30dp
+                </dimen>
+                <dimen name="weibosdk_dialog_left_margin" >30dp
+                </dimen>
+            </file>
+            <file
+                path="C:\Users\GYH\.ssh\ceistudy\Weibo\src\main\res\values-large-long\dimens.xml"
+                qualifiers="large-long" >
+                <dimen name="weibosdk_dialog_left_margin" >30dp
+                </dimen>
+                <dimen name="weibosdk_dialog_top_margin" >30dp
+                </dimen>
+                <dimen name="weibosdk_dialog_right_margin" >30dp
+                </dimen>
+                <dimen name="weibosdk_dialog_bottom_margin" >15dp
+                </dimen>
+            </file>
+            <file
+                path="C:\Users\GYH\.ssh\ceistudy\Weibo\src\main\res\values-normal-notlong\dimens.xml"
+                qualifiers="normal-notlong" >
+                <dimen name="weibosdk_dialog_top_margin" >30dp
+                </dimen>
+                <dimen name="weibosdk_dialog_bottom_margin" >15dp
+                </dimen>
+                <dimen name="weibosdk_dialog_right_margin" >30dp
+                </dimen>
+                <dimen name="weibosdk_dialog_left_margin" >30dp
+                </dimen>
+            </file>
+        </source>
+        <source path="C:\Users\GYH\.ssh\ceistudy\Weibo\build\res\rs\debug" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="C:\Users\GYH\.ssh\ceistudy\Weibo\src\debug\res" />
+    </dataSet>
+
+</merger>

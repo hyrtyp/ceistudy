@@ -39,4 +39,13 @@
 		<item name="android:textColor">#ffffff</item>
 	</style>
 	<style name="AppTheme" parent="android:Theme.Light" />
+    <style name="phone_study_bottom_tv">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:background">@color/phone_bottomandtop_bg</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:layout_marginRight">1dp</item>
+        <item name="android:layout_marginLeft">1dp</item>
+        <item name="android:textSize">15sp</item>
+    </style>
 </resources>

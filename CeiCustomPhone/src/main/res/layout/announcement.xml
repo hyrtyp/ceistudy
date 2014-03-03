@@ -68,7 +68,7 @@
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 	>
-        <include layout="@layout/phone_study_bottom_other" />
+        <include layout="@layout/phone_study_bottom_other2" />
 	</LinearLayout>
 	<ListView
 		android:cacheColorHint="@null"

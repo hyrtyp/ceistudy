@@ -67,7 +67,7 @@
         </LinearLayout>
     </HorizontalScrollView>
 
-    <include layout="@layout/phone_study_bottom"/>
+    <include layout="@layout/phone_study_bottom2"/>
     <ListView
         android:id="@+id/phone_study_listview"
         android:layout_width="fill_parent"
