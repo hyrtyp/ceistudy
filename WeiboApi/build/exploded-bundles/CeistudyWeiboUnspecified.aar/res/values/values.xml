@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- From: file:/C:/Users/GYH/.ssh/ceistudy/Weibo/src/main/res/values/color.xml -->
+    <!-- From: file:/home/yepeng/.ssh/ceistudy/Weibo/src/main/res/values/color.xml -->
     <eat-comment />
 
     <color name="dialog_title_blue">#9CCCF7</color>
     <color name="text_num_gray">#333</color>
     <color name="transparent">#00000000</color>
-    <!-- From: file:/C:/Users/GYH/.ssh/ceistudy/Weibo/src/main/res/values/dimens.xml -->
+    <!-- From: file:/home/yepeng/.ssh/ceistudy/Weibo/src/main/res/values/dimens.xml -->
     <eat-comment />
 
     <dimen name="weibosdk_dialog_bottom_margin">10dp</dimen>

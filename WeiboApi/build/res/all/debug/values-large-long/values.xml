@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- From: file:/C:/Users/GYH/.ssh/ceistudy/WeiboApi/build/exploded-bundles/CeistudyWeiboUnspecified.aar/res/values-large-long/values.xml -->
+    <!-- From: file:/home/yepeng/.ssh/ceistudy/WeiboApi/build/exploded-bundles/CeistudyWeiboUnspecified.aar/res/values-large-long/values.xml -->
     <eat-comment />
 
     <dimen name="weibosdk_dialog_bottom_margin">15dp</dimen>

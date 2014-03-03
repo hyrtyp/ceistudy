@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- From: file:/C:/Users/GYH/.ssh/ceistudy/WeiboApi/build/exploded-bundles/CeistudyWeiboUnspecified.aar/res/values/values.xml -->
+    <!-- From: file:/home/yepeng/.ssh/ceistudy/WeiboApi/build/exploded-bundles/CeistudyWeiboUnspecified.aar/res/values/values.xml -->
     <eat-comment />
 
     <color name="dialog_title_blue">#9CCCF7</color>
