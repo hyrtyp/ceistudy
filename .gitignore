@@ -5,4 +5,9 @@
 /.idea
 /app
 /gradle.properties
+Weibo/build
+WeiboApi/build
+CeiCustom/build
+CeiCustomPhone/build
+
 
