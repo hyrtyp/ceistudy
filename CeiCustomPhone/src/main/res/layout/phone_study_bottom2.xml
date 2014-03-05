@@ -9,6 +9,7 @@
     <include layout="@layout/phone_study_listview_bottom" />
 
     <HorizontalScrollView
+        android:id="@+id/bottom_horscr"
         android:scrollbars="none"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
@@ -34,7 +35,7 @@
                     android:gravity="center"
                     style="@style/phone_study_bottom_tv"
                     android:layout_marginLeft="0dp"
-                    android:visibility="gone"/>
+                    />
                 <TextView
                     android:id="@+id/phone_study_kind_tv"
                     android:layout_width="wrap_content"
@@ -42,7 +43,8 @@
                     android:layout_weight="1"
                     android:text="课程分类"
                     android:gravity="center"
-                    style="@style/phone_study_bottom_tv"/>
+                    style="@style/phone_study_bottom_tv"
+                    />
                 <TextView
                     android:id="@+id/phone_study_mymore_tv"
                     android:layout_width="wrap_content"
@@ -68,7 +70,7 @@
                     android:text="课程讨论"
                     android:gravity="center"
                     style="@style/phone_study_bottom_tv"
-                    android:visibility="gone"/>
+                    />
                 <TextView
                     android:id="@+id/phone_study_down_tv"
                     android:layout_width="wrap_content"
@@ -85,7 +87,7 @@
                     android:text="通知公告"
                     android:gravity="center"
                     style="@style/phone_study_bottom_tv"
-                    android:visibility="gone"/>
+                    />
                 <TextView
                     android:id="@+id/phone_study_personcenter_tv"
                     android:layout_width="wrap_content"
@@ -94,7 +96,7 @@
                     android:text="个人中心"
                     android:gravity="center"
                     style="@style/phone_study_bottom_tv"
-                    android:visibility="gone"/>
+                    />
                 <TextView
                     android:id="@+id/phone_study_about_tv"
                     android:layout_width="wrap_content"
@@ -104,7 +106,7 @@
                     android:gravity="center"
                     style="@style/phone_study_bottom_tv"
                     android:layout_marginRight="0dp"
-                    android:visibility="gone"/>
+                    />
             </LinearLayout>
         </LinearLayout>
 

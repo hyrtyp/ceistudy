@@ -70,23 +70,31 @@
 		android:layout_height="wrap_content"
 	>
 		<Button
-			android:background="@drawable/gywm_1_0"
 			android:id="@+id/abouts_us"
 			android:layout_weight="1"
 			android:layout_width="fill_parent"
-			android:layout_height="wrap_content" />
+			android:layout_height="wrap_content"
+            style="@style/phone_study_Tab"
+            android:text="关于我们"
+            android:background="@drawable/phone_study_tab_bg"
+            android:textColor="@color/phone_study_color_black"
+            />
 		<Button
-			android:background="@drawable/gywm_2_1"
 			android:id="@+id/usesinfo"
 			android:layout_weight="1"
 			android:layout_width="fill_parent"
-			android:layout_height="wrap_content" />
+			android:layout_height="wrap_content"
+            style="@style/phone_study_Tab"
+            android:text="使用说明"/>
 		<Button
-			android:background="@drawable/gywm_3_1"
+			android:background="@color/phone_study_color1"
 			android:id="@+id/mazminfo"
 			android:layout_weight="1"
 			android:layout_width="fill_parent"
-			android:layout_height="wrap_content" />
+			android:layout_height="wrap_content"
+            style="@style/phone_study_Tab"
+            android:text="免责说明"
+            />
 	</LinearLayout>
 	<WebView
 		android:layout_below="@+id/select"

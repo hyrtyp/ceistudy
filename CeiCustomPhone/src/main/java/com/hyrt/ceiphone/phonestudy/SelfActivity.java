@@ -1,20 +1,19 @@
 package com.hyrt.ceiphone.phonestudy;
 
-import java.util.List;
-
-import com.hyrt.cei.application.CeiApplication;
-import com.hyrt.cei.db.DataHelper;
-import com.hyrt.cei.vo.Preload;
-import com.hyrt.ceiphone.R;
-
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Message;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
+
+import com.hyrt.cei.application.CeiApplication;
+import com.hyrt.cei.db.DataHelper;
+import com.hyrt.cei.vo.Preload;
+import com.hyrt.ceiphone.R;
+
+import java.util.List;
 
 /**
  * 移动学习模块主界面
@@ -72,10 +71,10 @@ public class SelfActivity extends FoundationActivity {
 					for (int i = 0; i < labelParent.getChildCount(); i++) {
 						Button labelIv = (Button) labelParent.getChildAt(i);
 						if (i == j) {
-							labelIv.setBackgroundResource(R.drawable.phone_study_label_select);
-							labelIv.setTextColor(Color.BLUE);
+							labelIv.setBackgroundResource(R.drawable.phone_study_tab_bg);
+							labelIv.setTextColor(Color.BLACK);
 						} else {
-							labelIv.setBackgroundResource(R.drawable.phone_study_labelnormal);
+							labelIv.setBackgroundResource(R.drawable.phone_study_tab_bg2);
 							labelIv.setTextColor(Color.WHITE);
 						}
 					}

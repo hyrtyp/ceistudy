@@ -1,7 +1,6 @@
 package com.hyrt.cei.ui.personcenter;
 
 import android.app.Activity;
-import android.app.ActivityGroup;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -10,14 +9,10 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
 import android.view.Window;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import com.hyrt.cei.ui.witsea.WitSeaActivity;
+
 import com.hyrt.ceiphone.ContainerActivity;
 import com.hyrt.ceiphone.R;
-import com.hyrt.ceiphone.common.Announcement;
-import com.hyrt.ceiphone.common.HomePageDZB;
 import com.hyrt.ceiphone.phonestudy.FoundationActivity;
 
 /**
@@ -83,30 +78,34 @@ public class PersonCenter extends FoundationActivity implements OnClickListener 
         super.onClick(v);
 		switch (v.getId()) {
 		case R.id.person_info:
-			findViewById(R.id.person_info).setBackgroundResource(
-					R.drawable.grzx_1_0);
-			findViewById(R.id.qccount_info).setBackgroundResource(
-					R.drawable.grzx_2_1);
-			findViewById(R.id.change_password).setBackgroundResource(
-					R.drawable.grzx_3_1);
+            //换底色
+            person_info.setBackgroundResource(R.drawable.phone_study_tab_bg);
+            qccount_info.setBackgroundResource(R.drawable.phone_study_tab_bg2);
+            change_password.setBackgroundResource(R.drawable.phone_study_tab_bg2);
+            //换字
+            person_info.setTextColor(getResources().getColor(R.color.phone_study_color_black));
+            qccount_info.setTextColor(getResources().getColor(R.color.phone_study_color_White));
+            change_password.setTextColor(getResources().getColor(R.color.phone_study_color_White));
 			SwitchActivity(0);
 			break;
 		case R.id.qccount_info:
-			findViewById(R.id.person_info).setBackgroundResource(
-					R.drawable.grzx_1_1);
-			findViewById(R.id.qccount_info).setBackgroundResource(
-					R.drawable.grzx_2_0);
-			findViewById(R.id.change_password).setBackgroundResource(
-					R.drawable.grzx_3_1);
+            person_info.setBackgroundResource(R.drawable.phone_study_tab_bg2);
+            qccount_info.setBackgroundResource(R.drawable.phone_study_tab_bg);
+            change_password.setBackgroundResource(R.drawable.phone_study_tab_bg2);
+            //换字
+            person_info.setTextColor(getResources().getColor(R.color.phone_study_color_White));
+            qccount_info.setTextColor(getResources().getColor(R.color.phone_study_color_black));
+            change_password.setTextColor(getResources().getColor(R.color.phone_study_color_White));
 			SwitchActivity(1);
 			break;
 		case R.id.change_password:
-			findViewById(R.id.person_info).setBackgroundResource(
-					R.drawable.grzx_1_1);
-			findViewById(R.id.qccount_info).setBackgroundResource(
-					R.drawable.grzx_2_1);
-			findViewById(R.id.change_password).setBackgroundResource(
-					R.drawable.grzx_3_0);
+            person_info.setBackgroundResource(R.drawable.phone_study_tab_bg2);
+            qccount_info.setBackgroundResource(R.drawable.phone_study_tab_bg2);
+            change_password.setBackgroundResource(R.drawable.phone_study_tab_bg);
+            //换字
+            person_info.setTextColor(getResources().getColor(R.color.phone_study_color_White));
+            qccount_info.setTextColor(getResources().getColor(R.color.phone_study_color_White));
+            change_password.setTextColor(getResources().getColor(R.color.phone_study_color_black));
 			SwitchActivity(2);
 			break;
 		}

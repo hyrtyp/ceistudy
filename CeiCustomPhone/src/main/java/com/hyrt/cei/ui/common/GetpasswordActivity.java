@@ -1,7 +1,7 @@
 package com.hyrt.cei.ui.common;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import android.app.Activity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -16,7 +16,6 @@ import com.hyrt.cei.util.XmlUtil;
 import com.hyrt.cei.webservice.service.Service;
 import com.hyrt.ceiphone.ContainerActivity;
 import com.hyrt.ceiphone.R;
-import com.hyrt.ceiphone.common.HomePageDZB;
 import com.hyrt.ceiphone.phonestudy.PhoneStudyActivity;
 
 public class GetpasswordActivity extends ContainerActivity{
@@ -47,7 +46,7 @@ public class GetpasswordActivity extends ContainerActivity{
 					@Override
 					public void onClick(View v) {
 						Intent intent = new Intent(GetpasswordActivity.this,
-								LoginActivity.class);
+								LoginActivityphone.class);
 						startActivity(intent);
 						GetpasswordActivity.this.finish();
 					}

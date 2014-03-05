@@ -1,12 +1,26 @@
 package com.hyrt.ceiphone.phonestudy;
 
-import java.io.File;
-import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.Bundle;
+import android.os.Environment;
+import android.os.Handler;
+import android.os.Message;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
 import com.hyrt.cei.application.CeiApplication;
 import com.hyrt.cei.db.DataHelper;
 import com.hyrt.cei.predownload.DownloadProgressListener;
@@ -24,31 +38,13 @@ import com.hyrt.cei.webservice.service.Service;
 import com.hyrt.ceiphone.R;
 import com.hyrt.ceiphone.common.WebViewUtil;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.AlertDialog.Builder;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.os.Bundle;
-import android.os.Environment;
-import android.os.Handler;
-import android.os.Message;
-import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.ViewGroup.LayoutParams;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.PopupWindow;
-import android.widget.ProgressBar;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
-import android.widget.Toast;
+import java.io.File;
+import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 /*
  * 
@@ -223,15 +219,18 @@ public class PreloadActivity extends FoundationActivity {
 		columnEntry = ((CeiApplication) getApplication()).columnEntry;
 		myformat = new DecimalFormat("#0.00");
 		layoutInflater = getLayoutInflater();
-		final ImageView alreLoadBtn = (ImageView) findViewById(R.id.phone_study_preload_alreLoadBtn);
-		final ImageView loadBtn = (ImageView) findViewById(R.id.phone_study_preload_loadingBtn);
+		final Button alreLoadBtn = (Button) findViewById(R.id.phone_study_preload_alreLoadBtn);
+		final Button loadBtn = (Button) findViewById(R.id.phone_study_preload_loadingBtn);
 		alreLoadBtn.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				alreLoadBtn
-						.setImageResource(R.drawable.phone_study_preload_aldown_hover);
-				loadBtn.setImageResource(R.drawable.phone_study_preload_down);
+                //换底色
+                alreLoadBtn.setBackgroundResource(R.drawable.phone_study_tab_bg);
+                loadBtn.setBackgroundResource(R.drawable.phone_study_tab_bg2);
+                //换字
+                alreLoadBtn.setTextColor(getResources().getColor(R.color.phone_study_color_black));
+                loadBtn.setTextColor(getResources().getColor(R.color.phone_study_color_White));
 				for (int i = 0; i < linearLayList.getChildCount(); i++) {
 					if (linearLayList
 							.getChildAt(i)
@@ -248,9 +247,12 @@ public class PreloadActivity extends FoundationActivity {
 
 			@Override
 			public void onClick(View v) {
-				alreLoadBtn
-						.setImageResource(R.drawable.phone_study_preload_aldown);
-				loadBtn.setImageResource(R.drawable.phone_study_preload_down_hover);
+                //换底色
+                alreLoadBtn.setBackgroundResource(R.drawable.phone_study_tab_bg2);
+                loadBtn.setBackgroundResource(R.drawable.phone_study_tab_bg);
+                //换字
+                alreLoadBtn.setTextColor(getResources().getColor(R.color.phone_study_color_White));
+                loadBtn.setTextColor(getResources().getColor(R.color.phone_study_color_black));
 				for (int i = 0; i < linearLayList.getChildCount(); i++) {
 					if (linearLayList
 							.getChildAt(i)

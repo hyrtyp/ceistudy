@@ -152,7 +152,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.hyrt.cei.ui.common.LoginActivity"
+            android:name="com.hyrt.cei.ui.common.LoginActivityphone"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
         <activity

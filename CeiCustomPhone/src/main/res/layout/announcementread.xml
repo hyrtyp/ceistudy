@@ -9,13 +9,13 @@
 	<RelativeLayout
 		android:layout_alignParentTop="true"
 		android:id="@+id/top"
+        android:layout_height="48dp"
 		android:layout_width="fill_parent"
-		android:layout_height="wrap_content"
-		android:background="@drawable/phone_study_topbg"
+		android:background="@color/phone_bottomandtop_bg"
 	>
 		<TextView
 		    android:text="通知公告"
-		    style="@style/yangshi_phone_title_big"
+		    style="@style/phone_study_top_tv"
 			android:layout_marginLeft="20dip"
 			android:layout_centerInParent="true"
 			android:layout_width="wrap_content"

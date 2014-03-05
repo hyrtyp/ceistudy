@@ -10,42 +10,36 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup.LayoutParams;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 import android.widget.LinearLayout;
-import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hyrt.cei.application.CeiApplication;
-import com.hyrt.cei.ui.common.LoginActivity;
+import com.hyrt.cei.ui.common.LoginActivityphone;
 import com.hyrt.cei.ui.econdata.EconDataMain;
 import com.hyrt.cei.ui.information.InformationActivity;
 import com.hyrt.cei.ui.personcenter.PersonCenter;
 import com.hyrt.cei.ui.witsea.WitSeaActivity;
-import com.hyrt.cei.update.UpdateManager;
 import com.hyrt.cei.util.AsyncImageLoader;
 import com.hyrt.cei.util.XmlUtil;
 import com.hyrt.cei.vo.AnnouncementNews;
 import com.hyrt.cei.vo.ColumnEntry;
 import com.hyrt.cei.vo.ImageResourse;
-import com.hyrt.cei.vo.Preload;
 import com.hyrt.cei.webservice.service.Service;
 import com.hyrt.ceiphone.ContainerActivity;
 import com.hyrt.ceiphone.R;
 import com.hyrt.ceiphone.adapter.GridViewAdapter;
 import com.hyrt.ceiphone.phonestudy.FoundationActivity;
 import com.hyrt.ceiphone.phonestudy.PhoneStudyActivity;
-import com.hyrt.ceiphone.phonestudy.PreloadActivity;
 import com.hyrt.readreport.ReadReportMainActivity;
 
 public class HomePageDZB extends ContainerActivity implements OnClickListener,
@@ -205,7 +199,7 @@ public class HomePageDZB extends ContainerActivity implements OnClickListener,
 		switch (v.getId()) {
 		case R.id.main_login:
 			// 根据登录名来显示登陆按钮那个位置
-			intent = new Intent(this, LoginActivity.class);
+			intent = new Intent(this, LoginActivityphone.class);
 			startActivity(intent);
 			break;
 		case R.id.main_rl:

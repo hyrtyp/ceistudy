@@ -1,7 +1,5 @@
 package com.hyrt.ceiphone.phonestudy;
 
-import com.hyrt.ceiphone.R;
-
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Message;
@@ -9,6 +7,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.LinearLayout;
+
+import com.hyrt.ceiphone.R;
 
 /**
  * 移动学习模块主界面
@@ -91,10 +91,10 @@ public class StudyRecordActivity extends FoundationActivity {
 					for (int i = 0; i < labelParent.getChildCount(); i++) {
 						Button iv = (Button) labelParent.getChildAt(i);
 						if (i == x) {
-							iv.setBackgroundResource(R.drawable.phone_study_label_select);
-							iv.setTextColor(Color.BLUE);
+							iv.setBackgroundResource(R.drawable.phone_study_tab_bg);
+							iv.setTextColor(Color.BLACK);
 						} else {
-							iv.setBackgroundResource(R.drawable.phone_study_labelnormal);
+							iv.setBackgroundResource(R.drawable.phone_study_tab_bg2);
 							iv.setTextColor(Color.WHITE);
 						}
 					}

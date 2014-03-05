@@ -41,11 +41,72 @@
 	<style name="AppTheme" parent="android:Theme.Light" />
     <style name="phone_study_bottom_tv">
         <item name="android:textColor">#ffffff</item>
-        <item name="android:background">@color/phone_bottomandtop_bg</item>
+        <item name="android:background">@drawable/phone_study_bottom_tv_bg</item>
         <item name="android:paddingRight">10dp</item>
         <item name="android:paddingLeft">10dp</item>
         <item name="android:layout_marginRight">1dp</item>
         <item name="android:layout_marginLeft">1dp</item>
         <item name="android:textSize">15sp</item>
+    </style>
+    
+    <style name="phone_study_bt">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:layout_width">57dp</item>
+        <item name="android:layout_height">33dp</item>
+        <item name="android:background">@drawable/phone_study_bt_bg</item>
+    </style>
+    
+    <style name="phone_study_Tab">
+        <item name="android:background">@drawable/phone_study_tab_bg2</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+    
+    <style name="phone_study_h1">
+        <item name="android:textColor">#054b93</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="phone_study_h1_small">
+        <item name="android:textColor">#b5b5b5</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="phone_study_h2">
+        <item name="android:background">@color/phone_study_h2_bg</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:padding">3dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="phone_study_text">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+    <style name="phone_study_image_detail">
+        <item name="android:layout_width">110dp</item>
+        <item name="android:layout_height">100dp</item>
+    </style>
+    <style name="phone_study_image_list">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">80dp</item>
+    </style>
+
+    <style name="phone_study_listview">
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingLeft">15dp</item>
+    </style>
+    <style name="phone_study_top_tv">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">@dimen/top_text_size</item>
     </style>
 </resources>

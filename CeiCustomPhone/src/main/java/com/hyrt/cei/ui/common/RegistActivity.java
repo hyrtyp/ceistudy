@@ -5,7 +5,6 @@ import com.hyrt.cei.vo.UserInfo;
 import com.hyrt.cei.webservice.service.Service;
 import com.hyrt.ceiphone.ContainerActivity;
 import com.hyrt.ceiphone.R;
-import com.hyrt.ceiphone.WelcomeActivity;
 import com.hyrt.ceiphone.common.HomePageDZB;
 import com.hyrt.ceiphone.phonestudy.PhoneStudyActivity;
 
@@ -187,7 +186,7 @@ public class RegistActivity extends ContainerActivity {
 					@Override
 					public void onClick(View v) {
 						Intent intent = new Intent(RegistActivity.this,
-								LoginActivity.class);
+								LoginActivityphone.class);
 						startActivity(intent);
 					}
 				});

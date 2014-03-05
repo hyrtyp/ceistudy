@@ -4,7 +4,6 @@ import java.util.List;
 
 import com.hyrt.cei.adapter.ReadReportAdapter;
 import com.hyrt.cei.application.CeiApplication;
-import com.hyrt.cei.ui.common.LoginActivity;
 import com.hyrt.cei.util.MyTools;
 import com.hyrt.cei.util.WriteOrRead;
 import com.hyrt.cei.util.XmlUtil;
@@ -13,9 +12,7 @@ import com.hyrt.cei.vo.Report;
 import com.hyrt.cei.webservice.service.Service;
 import com.hyrt.ceiphone.ContainerActivity;
 import com.hyrt.ceiphone.R;
-import com.hyrt.ceiphone.common.HomePageDZB;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;

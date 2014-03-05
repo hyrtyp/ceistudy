@@ -1,8 +1,26 @@
 package com.hyrt.ceiphone.adapter;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.os.Handler;
+import android.os.Message;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.PopupWindow;
+import android.widget.TextView;
 
 import com.hyrt.cei.application.CeiApplication;
 import com.hyrt.cei.db.DataHelper;
@@ -21,26 +39,9 @@ import com.hyrt.ceiphone.phonestudy.FoundationActivity;
 import com.hyrt.ceiphone.phonestudy.PreloadActivity;
 import com.hyrt.ceiphone.phonestudy.SayGroupActivity;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.AlertDialog.Builder;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.graphics.drawable.Drawable;
-import android.os.Handler;
-import android.os.Message;
-import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.ViewGroup.LayoutParams;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.PopupWindow;
-import android.widget.TextView;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class PhoneStudyAdapter extends BaseAdapter {
 
@@ -167,13 +168,13 @@ public class PhoneStudyAdapter extends BaseAdapter {
 		convertView = inflater.inflate(itemLayout, null);
 		holder.courseIcon = (ImageView) convertView
 				.findViewById(R.id.phone_study_listviewitem_icon);
-		holder.coursePlayBtn = (ImageView) convertView
+		holder.coursePlayBtn = (Button) convertView
 				.findViewById(R.id.phone_study_listviewitem_playbtn);
 		holder.downloadBtn = (ImageView) convertView
 				.findViewById(R.id.phone_study_listviewitem_downbtn);
 		holder.controCourse = (ImageView) convertView
 				.findViewById(R.id.phone_study_controllcourse);
-		holder.sayBtn = (ImageView) convertView
+		holder.sayBtn = (Button) convertView
 				.findViewById(R.id.phone_study_listviewitem_say);
 		holder.uploadStudyBtn = (ImageView) convertView
 				.findViewById(R.id.phone_study_listviewitem_upload);
@@ -546,9 +547,9 @@ public class PhoneStudyAdapter extends BaseAdapter {
 	class ViewHolder {
 		ImageView courseIcon;
 		ImageView downloadBtn;
-		ImageView coursePlayBtn;
+        Button coursePlayBtn;
 		ImageView controCourse;
-		ImageView sayBtn;
+		Button sayBtn;
 		ImageView uploadStudyBtn;
 		TextView tv1;
 		TextView tv2;

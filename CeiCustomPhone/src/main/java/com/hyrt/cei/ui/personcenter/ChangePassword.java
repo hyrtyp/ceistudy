@@ -6,7 +6,6 @@ import java.util.concurrent.Executors;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -18,8 +17,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.hyrt.cei.application.CeiApplication;
-import com.hyrt.cei.ui.common.LoginActivity;
-import com.hyrt.cei.ui.common.RegistActivity;
 import com.hyrt.cei.util.XmlUtil;
 import com.hyrt.cei.webservice.service.Service;
 import com.hyrt.ceiphone.R;

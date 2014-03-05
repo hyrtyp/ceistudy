@@ -1,1 +1,1 @@
-include ':Weibo',':WeiboApi',':CeiCustom',':CeiCustomPhone',':app'
+include ':Weibo',':WeiboApi',':CeiCustomPhone',':app'

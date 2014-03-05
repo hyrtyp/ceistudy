@@ -3,10 +3,8 @@ package com.hyrt.readreport;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.hyrt.cei.adapter.GoodReportAdapter;
 import com.hyrt.cei.adapter.ReadReportAdapter;
 import com.hyrt.cei.application.CeiApplication;
-import com.hyrt.cei.ui.common.LoginActivity;
 import com.hyrt.cei.util.MyTools;
 import com.hyrt.cei.util.WriteOrRead;
 import com.hyrt.cei.util.XmlUtil;

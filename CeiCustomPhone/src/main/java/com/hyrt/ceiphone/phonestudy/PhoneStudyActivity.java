@@ -1,10 +1,20 @@
 package com.hyrt.ceiphone.phonestudy;
 
-import java.util.ArrayList;
-import java.util.List;
+import android.app.Activity;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.Gallery;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.hyrt.cei.application.CeiApplication;
-import com.hyrt.cei.ui.common.LoginActivity;
+import com.hyrt.cei.ui.common.LoginActivityphone;
 import com.hyrt.cei.ui.phonestudy.CourseDetailActivity;
 import com.hyrt.cei.update.UpdateManager;
 import com.hyrt.cei.util.MyTools;
@@ -16,19 +26,8 @@ import com.hyrt.cei.webservice.service.Service;
 import com.hyrt.ceiphone.R;
 import com.hyrt.ceiphone.adapter.GoodClassAdapter;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.Gallery;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.AdapterView.OnItemSelectedListener;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 移动学习模块主界面
@@ -116,7 +115,7 @@ public class PhoneStudyActivity extends FoundationActivity {
         findViewById(R.id.main_login).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PhoneStudyActivity.this, LoginActivity.class);
+                Intent intent = new Intent(PhoneStudyActivity.this, LoginActivityphone.class);
                 startActivity(intent);
             }
         });

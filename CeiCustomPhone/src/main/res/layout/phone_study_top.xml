@@ -35,7 +35,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            style="@style/yangshi_phone_title_big"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/top_text_size"
             />
 
     <Button

@@ -2,25 +2,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/phone_study_labelParent"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp">
 
     <Button
-        style="@style/yangshi_4"
         android:layout_width="wrap_content"
-        android:layout_height="30dip"
-        android:background="@drawable/phone_study_label_select"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:text="全部自选课"
-        android:textColor="@color/phone_study_menuselect" />
-
+        style="@style/phone_study_Tab"
+        android:background="@drawable/phone_study_tab_bg"
+        android:textColor="@color/phone_study_color_black" />
     <Button
-        style="@style/yangshi_4"
         android:layout_width="wrap_content"
-        android:layout_height="30dip"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="1dip"
-        android:background="@drawable/phone_study_labelnormal"
         android:gravity="center"
         android:text="下载自选课"
-        android:textColor="@color/phone_study_menunormal" />
+        style="@style/phone_study_Tab"
+        />
 
 </LinearLayout>

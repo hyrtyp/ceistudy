@@ -1,8 +1,5 @@
 package com.hyrt.ceiphone.common;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -15,21 +12,19 @@ import android.webkit.WebSettings;
 import android.webkit.WebSettings.LayoutAlgorithm;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.Toast;
+import android.widget.Button;
 
 import com.hyrt.cei.application.CeiApplication;
-import com.hyrt.cei.ui.personcenter.PersonCenter;
-import com.hyrt.cei.ui.witsea.WitSeaActivity;
 import com.hyrt.cei.util.MyTools;
 import com.hyrt.cei.util.XmlUtil;
 import com.hyrt.cei.vo.ColumnEntry;
 import com.hyrt.cei.vo.InfoNew;
 import com.hyrt.cei.webservice.service.Service;
-import com.hyrt.ceiphone.ContainerActivity;
 import com.hyrt.ceiphone.R;
 import com.hyrt.ceiphone.phonestudy.FoundationActivity;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 关于我们
@@ -47,11 +42,13 @@ public class Disclaimer extends FoundationActivity implements OnClickListener {
 	private String htmlHade = MyTools.newsHtml;
 	private String loginName;
 
+    private Button abouts_us,usesinfo,mazminfo;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
         CURRENT_KEY = ABOUT_DATA_KEY;
-		setContentView(R.layout.disclaimer);
+		setContentView(R.layout.disclaimer2);
 		overridePendingTransition(R.anim.push_in, R.anim.push_out);
 		SharedPreferences settings = getSharedPreferences("loginInfo",
 				Activity.MODE_PRIVATE);
@@ -71,9 +68,12 @@ public class Disclaimer extends FoundationActivity implements OnClickListener {
 	}
 
 	private void init() {
-		findViewById(R.id.abouts_us).setOnClickListener(this);
-		findViewById(R.id.usesinfo).setOnClickListener(this);
-		findViewById(R.id.mazminfo).setOnClickListener(this);
+        abouts_us=(Button)findViewById(R.id.abouts_us);
+        abouts_us.setOnClickListener(this);
+        usesinfo=(Button)findViewById(R.id.usesinfo);
+        usesinfo.setOnClickListener(this);
+        mazminfo=(Button)findViewById(R.id.mazminfo);
+        mazminfo.setOnClickListener(this);
 		refreshListData();
 	}
 
@@ -118,12 +118,14 @@ public class Disclaimer extends FoundationActivity implements OnClickListener {
         super.onClick(v);
 		switch (v.getId()) {
 		case R.id.abouts_us:
-			findViewById(R.id.abouts_us).setBackgroundResource(
-					R.drawable.gywm_1_0);
-			findViewById(R.id.usesinfo).setBackgroundResource(
-					R.drawable.gywm_2_1);
-			findViewById(R.id.mazminfo).setBackgroundResource(
-					R.drawable.gywm_3_1);
+            //换底色
+            abouts_us.setBackgroundResource(R.drawable.phone_study_tab_bg);
+            usesinfo.setBackgroundResource(R.drawable.phone_study_tab_bg2);
+            mazminfo.setBackgroundResource(R.drawable.phone_study_tab_bg2);
+            //换字
+            abouts_us.setTextColor(getResources().getColor(R.color.phone_study_color_black));
+            usesinfo.setTextColor(getResources().getColor(R.color.phone_study_color_White));
+            mazminfo.setTextColor(getResources().getColor(R.color.phone_study_color_White));
 			if (news.size() >= 3) {
 				for (int i = 0; i < news.size(); i++) {
 					if (news.get(i).getTitle().endsWith(MODEL_NAME)) {
@@ -133,12 +135,14 @@ public class Disclaimer extends FoundationActivity implements OnClickListener {
 			}
 			break;
 		case R.id.usesinfo:
-			findViewById(R.id.abouts_us).setBackgroundResource(
-					R.drawable.gywm_1_1);
-			findViewById(R.id.usesinfo).setBackgroundResource(
-					R.drawable.gywm_2_0);
-			findViewById(R.id.mazminfo).setBackgroundResource(
-					R.drawable.gywm_3_1);
+            //换底色
+            abouts_us.setBackgroundResource(R.drawable.phone_study_tab_bg2);
+            usesinfo.setBackgroundResource(R.drawable.phone_study_tab_bg);
+            mazminfo.setBackgroundResource(R.drawable.phone_study_tab_bg2);
+            //换字
+            abouts_us.setTextColor(getResources().getColor(R.color.phone_study_color_White));
+            usesinfo.setTextColor(getResources().getColor(R.color.phone_study_color_black));
+            mazminfo.setTextColor(getResources().getColor(R.color.phone_study_color_White));
 			if (news.size() >= 3) {
 				for (int i = 0; i < news.size(); i++) {
 					if (news.get(i).getTitle().endsWith("使用说明")) {
@@ -148,12 +152,14 @@ public class Disclaimer extends FoundationActivity implements OnClickListener {
 			}
 			break;
 		case R.id.mazminfo:
-			findViewById(R.id.abouts_us).setBackgroundResource(
-					R.drawable.gywm_1_1);
-			findViewById(R.id.usesinfo).setBackgroundResource(
-					R.drawable.gywm_2_1);
-			findViewById(R.id.mazminfo).setBackgroundResource(
-					R.drawable.gywm_3_0);
+            //换底色
+            abouts_us.setBackgroundResource(R.drawable.phone_study_tab_bg2);
+            usesinfo.setBackgroundResource(R.drawable.phone_study_tab_bg2);
+            mazminfo.setBackgroundResource(R.drawable.phone_study_tab_bg);
+            //换字
+            abouts_us.setTextColor(getResources().getColor(R.color.phone_study_color_White));
+            usesinfo.setTextColor(getResources().getColor(R.color.phone_study_color_White));
+            mazminfo.setTextColor(getResources().getColor(R.color.phone_study_color_black));
 			if (news.size() >= 3) {
 				for (int i = 0; i < news.size(); i++) {
 					if (news.get(i).getTitle().endsWith("免责声明")) {

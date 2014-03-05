@@ -1,27 +1,28 @@
 package com.hyrt.cei.ui.common;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Paint;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.View.OnFocusChangeListener;
+import android.view.WindowManager;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import com.hyrt.ceiphone.ContainerActivity;
 import com.hyrt.ceiphone.R;
 import com.hyrt.ceiphone.WelcomeActivity;
 import com.hyrt.ceiphone.common.HomePageDZB;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.os.Bundle;
-import android.view.View;
-import android.view.View.OnFocusChangeListener;
-import android.view.WindowManager;
-import android.view.View.OnClickListener;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.EditText;
-import android.widget.Toast;
-
 /**
  * 登录界面
  * 
  */
-public class LoginActivity extends ContainerActivity {
+public class LoginActivityphone extends ContainerActivity {
 	private int i1, i2;
 	private EditText accountEt;
 	private EditText passwordEt;
@@ -37,20 +38,20 @@ public class LoginActivity extends ContainerActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.ui_login);
+		setContentView(R.layout.ui_login2);
 		getWindow().setSoftInputMode(
 				WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 		for (int i = 0; i < HomePageDZB.commonActivities.size(); i++) {
 			try {
-				LoginActivity isLoginActivity = (LoginActivity) (HomePageDZB.commonActivities
+				LoginActivityphone isLoginActivityphone = (LoginActivityphone) (HomePageDZB.commonActivities
 						.get(i));
-				isLoginActivity.finish();
+				isLoginActivityphone.finish();
 			} catch (Exception e) {
 			}
 		}
 		HomePageDZB.commonActivities.add(this);
-		accountEt = (EditText) findViewById(R.id.ui_login_username);
-		passwordEt = (EditText) findViewById(R.id.ui_login_password);
+		accountEt = (EditText) findViewById(R.id.ui_login_username_et);
+		passwordEt = (EditText) findViewById(R.id.ui_login_password_et);
 		SharedPreferences settings = getSharedPreferences("loginInfo",
 				Activity.MODE_PRIVATE);
 		loginName = settings.getString("LOGINNAME", "");
@@ -77,27 +78,33 @@ public class LoginActivity extends ContainerActivity {
 				}
 			}
 		});
-		findViewById(R.id.ui_login_regist).setOnClickListener(
+		findViewById(R.id.ui_login_regist_tv).setOnClickListener(
 				new OnClickListener() {
 
 					@Override
 					public void onClick(View v) {
-						Intent intent = new Intent(LoginActivity.this,
+						Intent intent = new Intent(LoginActivityphone.this,
 								RegistActivity.class);
 						startActivity(intent);
 					}
 				});
-		findViewById(R.id.ui_getpassword).setOnClickListener(
-				new OnClickListener() {
+        //设置下划线
+        TextView ulrtv=(TextView) findViewById(R.id.ui_login_regist_tv);
+        ulrtv.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG);
+        TextView fgpd=(TextView) findViewById(R.id.ui_getpassword_tv);
+        fgpd.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG);
 
-					@Override
-					public void onClick(View v) {
-						Intent intent = new Intent(LoginActivity.this,
-								GetpasswordActivity.class);
-						startActivity(intent);
-					}
-				});
-		findViewById(R.id.ui_login_login).setOnClickListener(
+        findViewById(R.id.ui_getpassword_tv).setOnClickListener(
+                new OnClickListener() {
+
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(LoginActivityphone.this,
+                                GetpasswordActivity.class);
+                        startActivity(intent);
+                    }
+                });
+		findViewById(R.id.ui_login_login_bt).setOnClickListener(
 				new OnClickListener() {
 
 					@Override
@@ -108,34 +115,34 @@ public class LoginActivity extends ContainerActivity {
 						if (accountEt.getText().toString().trim().equals("")
 								|| passwordEt.getText().toString().trim()
 										.equals("")) {
-							Toast.makeText(LoginActivity.this, "用户名密码不能为空!",
+							Toast.makeText(LoginActivityphone.this, "用户名密码不能为空!",
 									Toast.LENGTH_SHORT).show();
 							return;
 						}
-						LoginActivity.this.finish();
+						LoginActivityphone.this.finish();
 						editor.putString("LOGINNAME", accountEt.getText()
 								.toString().trim());
 						editor.putString("PASSWORD", passwordEt.getText()
 								.toString().trim());
 						editor.commit();
-						Intent intent = new Intent(LoginActivity.this,
+						Intent intent = new Intent(LoginActivityphone.this,
 								WelcomeActivity.class);
 						startActivity(intent);
 					}
 				});
-		findViewById(R.id.ui_back).setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				LoginActivity.this.finish();
-			}
-		});
+//		findViewById(R.id.ui_back).setOnClickListener(new OnClickListener() {
+//
+//			@Override
+//			public void onClick(View v) {
+//				LoginActivityphone.this.finish();
+//			}
+//		});
 	}
 
 	@Override
 	protected void onPause() {
 		// TODO Auto-generated method stub
 		super.onPause();
-		LoginActivity.this.finish();
+		LoginActivityphone.this.finish();
 	}
 }

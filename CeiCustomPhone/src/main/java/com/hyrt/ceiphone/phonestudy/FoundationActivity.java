@@ -15,6 +15,7 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
+import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -95,6 +96,11 @@ public class FoundationActivity extends ActivityGroup implements OnClickListener
 	private DataHelper dataHelper;
 	// 当前课件列表所对应的课件种类id
 	public String currentFunctionId;
+
+    //滚动视图
+    private HorizontalScrollView bottomHorScr;
+    //滚动长度
+    private int horLen;
 
 	public static final String WELLCLASS_NAME = "置顶课件";
 	public static String MODEL_NAME = "移动学习";
@@ -260,6 +266,7 @@ public class FoundationActivity extends ActivityGroup implements OnClickListener
 
 		}
 		super.onResume();
+        modifyBottombg();//修改底部导航
 	}
 
 	/**
@@ -349,7 +356,7 @@ public class FoundationActivity extends ActivityGroup implements OnClickListener
 	 */
 	private void registCommonEvent() {
 		LinearLayout bottomParent = (LinearLayout) findViewById(R.id.bottoms_parent);
-		for (int i = 0; bottomParent != null
+        for (int i = 0; bottomParent != null
 				&& i < bottomParent.getChildCount(); i++) {
 			bottomParent.getChildAt(i).setOnClickListener(this);
 		}
@@ -618,4 +625,56 @@ public class FoundationActivity extends ActivityGroup implements OnClickListener
 
 	}
 
+
+    /**
+     *修改底部课程
+     * */
+
+    private void modifyBottombg(){
+        TextView textView;
+        if(this instanceof Disclaimer){
+//            bottomHorScr.scrollTo();
+            textView=(TextView)findViewById(R.id.phone_study_about_tv);
+            textView.setBackgroundResource(R.drawable.bg_bottom_textview_focused);
+            textView.setTextColor(R.color.phone_bottomandtop_bg);
+        }else if(this instanceof PersonCenter){
+            textView=(TextView)findViewById(R.id.phone_study_personcenter_tv);
+            textView.setBackgroundResource(R.drawable.bg_bottom_textview_focused);
+            textView.setTextColor(R.color.phone_bottomandtop_bg);
+        }else if(this instanceof Announcement){
+            textView=(TextView)findViewById(R.id.phone_study_notice_tv);
+            textView.setBackgroundResource(R.drawable.bg_bottom_textview_focused);
+            textView.setTextColor(R.color.phone_bottomandtop_bg);
+        }else if(this instanceof SearchActivity){
+//            textView=(TextView)findViewById(R.id.phone_study_search);
+//            textView.setBackgroundResource(R.drawable.bg_bottom_textview_focused);
+//            textView.setTextColor(R.color.phone_bottomandtop_bg);
+        }else if(this instanceof StudyRecordActivity){
+            textView=(TextView)findViewById(R.id.phone_study_mymore_tv);
+            textView.setBackgroundResource(R.drawable.bg_bottom_textview_focused);
+            textView.setTextColor(R.color.phone_bottomandtop_bg);
+        }else if(this instanceof NominateActivity){
+            textView=(TextView)findViewById(R.id.phone_study_nominate_tv);
+            textView.setBackgroundResource(R.drawable.bg_bottom_textview_focused);
+            textView.setTextColor(R.color.phone_bottomandtop_bg);
+        }else if(this instanceof FreeActivity){
+            textView=(TextView)findViewById(R.id.phone_study_free);
+            textView.setBackgroundResource(R.drawable.bg_bottom_textview_focused);
+            textView.setTextColor(R.color.phone_bottomandtop_bg);
+        }else if(this instanceof KindsActivity){
+            textView=(TextView)findViewById(R.id.phone_study_kind_tv);
+            textView.setBackgroundResource(R.drawable.bg_bottom_textview_focused);
+            textView.setTextColor(R.color.phone_bottomandtop_bg);
+        }else if(this instanceof PreloadActivity){//
+
+        }else if(this instanceof SayActivity){
+            textView=(TextView)findViewById(R.id.phone_study_say_tv);
+            textView.setBackgroundResource(R.drawable.bg_bottom_textview_focused);
+            textView.setTextColor(R.color.phone_bottomandtop_bg);
+        }else if(this instanceof SelfActivity){
+            textView=(TextView)findViewById(R.id.phone_study_self_tv);
+            textView.setBackgroundResource(R.drawable.bg_bottom_textview_focused);
+            textView.setTextColor(R.color.phone_bottomandtop_bg);
+        }
+    }
 }

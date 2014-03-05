@@ -13,7 +13,7 @@
 		android:layout_height="48dp"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
-		android:background="@drawable/phone_study_topbg"
+		android:background="@color/phone_bottomandtop_bg"
 	>
         <ImageView
                 android:id="@+id/phone_study_icon"
@@ -22,10 +22,11 @@
                 android:layout_height="32dp"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
-                android:src="@drawable/icon"/>
+                android:src="@drawable/icon"
+            android:visibility="gone"/>
 		<TextView
 		    android:text="通知公告"
-            style="@style/yangshi_phone_title_small"
+            style="@style/phone_study_top_tv"
 			android:layout_marginLeft="20dip"
 			android:layout_centerInParent="true"
 			android:layout_width="wrap_content"

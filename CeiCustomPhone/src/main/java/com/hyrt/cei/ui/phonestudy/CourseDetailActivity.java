@@ -1,9 +1,5 @@
 package com.hyrt.cei.ui.phonestudy;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
@@ -20,6 +16,7 @@ import android.view.View.OnClickListener;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
@@ -45,6 +42,10 @@ import com.hyrt.ceiphone.common.WebViewUtil;
 import com.hyrt.ceiphone.phonestudy.FoundationActivity;
 import com.hyrt.ceiphone.phonestudy.PreloadActivity;
 import com.weibo.sdk.android.demo.MainActivity;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CourseDetailActivity extends FoundationActivity {
 
@@ -217,7 +218,7 @@ public class CourseDetailActivity extends FoundationActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.phone_study_detail);
+		setContentView(R.layout.phone_study_detail2);
 		this.CURRENT_KEY = FoundationActivity.DETAIL_DATA_KEY;
 		getWindow().setSoftInputMode(
 				WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
@@ -816,11 +817,12 @@ public class CourseDetailActivity extends FoundationActivity {
 
 	private void changeDownBtn(View view, String classId) {
 		DataHelper dataHelper = ((CeiApplication) (this.getApplication())).dataHelper;
-		ImageView downBtn = (ImageView) view;
+		Button downBtn = (Button) view;
 		Preload preload = dataHelper.getPreload(classId);
 		if (preload != null && preload.getLoadFinish() == 1) {
 			downBtn.setOnClickListener(null);
-			downBtn.setImageResource(R.drawable.phone_study_nodown_btn);
+            downBtn.setText("下载");
+//			downBtn.setImageResource(R.drawable.phone_study_nodown_btn);
 		}
 	}
 }

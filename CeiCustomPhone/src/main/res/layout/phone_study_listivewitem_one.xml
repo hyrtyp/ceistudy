@@ -2,29 +2,26 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="100dip"
-    android:paddingBottom="5dip"
-    android:paddingLeft="3dip"
-    android:paddingTop="5dip" 
-  >
+    style="@style/phone_study_listview">
 
     <ImageView
         android:id="@+id/phone_study_listviewitem_icon"
-        android:layout_width="100dip"
-        android:layout_height="80dip"
         android:src="@drawable/courseware_default_icon"
         android:layout_gravity="center_vertical"
         android:contentDescription="@string/hello"
-        android:scaleType="fitXY" />
+        android:scaleType="fitXY"
+        style="@style/phone_study_image_list"
+        />
 
     <LinearLayout
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="fill_parent"
         android:orientation="vertical"
-         android:paddingLeft="8dip"
+        android:paddingLeft="8dip"
         android:paddingTop="3dip" >
 
         <RelativeLayout
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="26dip" >
 
             <TextView
@@ -33,7 +30,7 @@
                 android:layout_height="fill_parent"
                 android:layout_alignParentLeft="true"
                 android:text="@string/phone_study_title"
-                style="@style/yangshi_1"
+                style="@style/phone_study_h1"
                 />
 
             <ImageView
@@ -49,14 +46,14 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="fill_parent" >
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:layout_alignParentLeft="true"
-                android:layout_marginTop="10dip"
+                android:layout_marginTop="5dip"
                 android:orientation="vertical" >
 
                 <TextView
@@ -64,7 +61,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/phone_study_teachername"
-                    style="@style/yangshi_2" />
+                    style="@style/phone_study_h1_small"/>
 
                 <TextView
                     android:id="@+id/phone_study_listviewitem_protime"
@@ -72,19 +69,20 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dip"
                     android:text="@string/phone_study_protime"
-                    style="@style/yangshi_2" />
+                   style="@style/phone_study_h1_small" />
             </LinearLayout>
-
-            <ImageView
-                android:id="@+id/phone_study_listviewitem_playbtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="12dip"
-                android:contentDescription="@string/hello"
-                android:src="@drawable/phone_study_play_btn" />
         </RelativeLayout>
     </LinearLayout>
-
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="right">
+        <Button
+            android:id="@+id/phone_study_listviewitem_playbtn"
+            style="@style/phone_study_bt"
+            android:text="播放"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"/>
+    </LinearLayout>
 </LinearLayout>

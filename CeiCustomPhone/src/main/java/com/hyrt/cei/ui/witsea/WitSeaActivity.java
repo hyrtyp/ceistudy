@@ -2,7 +2,6 @@ package com.hyrt.cei.ui.witsea;
 
 import java.util.List;
 import com.hyrt.cei.application.CeiApplication;
-import com.hyrt.cei.ui.common.LoginActivity;
 import com.hyrt.cei.ui.personcenter.PersonCenter;
 import com.hyrt.cei.util.AsyncImageLoader.ImageCallback;
 import com.hyrt.cei.util.MyTools;
@@ -36,7 +35,6 @@ import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class WitSeaActivity extends ContainerActivity implements OnClickListener {
 

@@ -7,7 +7,6 @@ import com.hyrt.cei.adapter.FlTableAdapter;
 import com.hyrt.cei.adapter.ReadReportAdapter;
 import com.hyrt.cei.application.CeiApplication;
 import com.hyrt.cei.db.DataHelper;
-import com.hyrt.cei.ui.common.LoginActivity;
 import com.hyrt.cei.util.MyTools;
 import com.hyrt.cei.util.ReportpaitUtil;
 import com.hyrt.cei.util.WriteOrRead;
@@ -18,7 +17,6 @@ import com.hyrt.cei.vo.ReportpaitElement;
 import com.hyrt.cei.webservice.service.Service;
 import com.hyrt.ceiphone.ContainerActivity;
 import com.hyrt.ceiphone.R;
-import com.hyrt.ceiphone.common.HomePageDZB;
 import com.hyrt.readreport.view.GGridView;
 
 import android.content.Intent;
